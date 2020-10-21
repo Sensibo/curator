@@ -22,17 +22,7 @@ def get_version():
     return VERSION
 
 def get_install_requires():
-    res = ['elasticsearch==7.1.0' ]
-    res.append('urllib3>=1.24.2,<1.25')
-    res.append('requests>=2.20.0')
-    res.append('boto3>=1.9.142')
-    res.append('requests_aws4auth>=0.9')
-    res.append('click>=6.7,<7.0')
-    res.append('pyyaml==3.13')
-    res.append('voluptuous>=0.9.3')
-    res.append('certifi>=2019.9.11')
-    res.append('six>=1.11.0')
-    return res
+    return []
 
 try:
     ### cx_Freeze ###
@@ -108,11 +98,11 @@ try:
         author_email = "info@elastic.co",
         description = "Tending your Elasticsearch indices",
         long_description=fread('README.rst'),
-        url = "http://github.com/elastic/curator",
-        download_url = "https://github.com/elastic/curator/tarball/v" + get_version(),
+        #url = "http://github.com/elastic/curator",
+        #download_url = "https://github.com/elastic/curator/tarball/v" + get_version(),
         license = "Apache License, Version 2.0",
-        install_requires = get_install_requires(),
-        setup_requires = get_install_requires(),
+        #install_requires = get_install_requires(),
+        #setup_requires = get_install_requires(),
         keywords = "elasticsearch time-series indexed index-expiry",
         packages = ["curator"],
         include_package_data=True,
